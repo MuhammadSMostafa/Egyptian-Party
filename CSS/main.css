@@ -1,0 +1,288 @@
+:root {
+  scroll-behavior: auto;
+  --primary-color: rgba(214, 46, 52, 0.6);
+  --secondary-color: #d62e33;
+  --text-light: #cccccc;
+  --text-dark: rgb(33, 37, 41);
+  --text-gray: #777;
+  --text-gray-light: rgb(119, 119, 119);
+  --text-gray-dark: #444;
+}
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+.home {
+  position: relative;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(var(--primary-color), var(--primary-color)),
+    url(../Images/Egyptian-party.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  color: white;
+}
+.home h1 {
+  font-size: 60px;
+  line-height: 1.2;
+}
+.home p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.home .open-menu {
+  position: absolute;
+  left: 0;
+  top: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px;
+  cursor: pointer;
+}
+.home .icon {
+  font-size: 25px;
+}
+aside {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #111111;
+  z-index: 999;
+  padding-top: 20px;
+}
+.close-menu {
+  cursor: pointer;
+  position: absolute;
+  right: 30px;
+  font-size: 25px;
+}
+aside ul {
+  list-style: none;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+aside li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+aside li a:hover,
+.close-menu:hover {
+  color: rgba(214, 46, 51, 0.4);
+}
+.details {
+  margin: 40px 0;
+  padding: 40px 0;
+}
+.details .singers {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.details .singers .content .headline {
+  background-color: #e68285;
+  cursor: pointer;
+  font-size: 28px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.2;
+}
+.details .singers .content .info {
+  background-color: var(--text-light);
+  color: var(--text-dark);
+  font-size: 16px;
+  font-weight: 400;
+  display: none;
+  overflow: hidden;
+}
+.details .singers .content .info p,
+.details .singers .content .headline h3 {
+  margin: 0;
+  padding: 10px;
+}
+.duration {
+  background: linear-gradient(var(--primary-color), var(--primary-color)),
+    url(../Images/Duration-time.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+}
+.duration .item {
+  display: grid;
+  place-content: center;
+  height: 250px;
+  border: solid 1px white;
+  font-size: 30px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5;
+}
+.duration .item span {
+  text-align: center;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.contact {
+  padding: 50px 0;
+  margin: 50px 0;
+}
+.contact .join-us {
+  display: flex;
+  flex-direction: column;
+}
+.contact .join-us h2 {
+  color: var(--text-gray-dark);
+  font-size: 35px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.contact .join-us p {
+  color: var(--text-gray-light);
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  align-self: center;
+}
+.contact .contact-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.contact .contact-info h3 {
+  color: var(--text-gray-dark);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+.contact .contact-info p {
+  color: var(--text-gray-light);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contact .data .item {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  gap: 10px;
+  color: var(--text-gray-light);
+  font-size: 16px;
+}
+.contact .data .item span {
+  display: inline-block;
+}
+.contact .data .item span i {
+  line-height: 16px;
+  font-weight: 900;
+}
+.contact .data .item p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+.contact .data .item p a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+.contact .data .item:nth-child(3) p a {
+  color: #25d366;
+}
+.contact .data .item:last-child p a {
+  color: var(--text-gray-light);
+}
+.contact .contact-info .social-media {
+  display: flex;
+  gap: 20px;
+}
+.contact .contact-info .social-media span {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #999;
+  cursor: pointer;
+  color: var(--text-gray-light);
+  transition: background-color 0.5s, color 0.5s, border 0.5s;
+}
+.contact .contact-info .social-media span i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.contact .contact-info .social-media span:hover {
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+}
+.contact .contact-us form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact .contact-us form input,
+.contact .contact-us form textarea {
+  padding: 5px 10px;
+}
+.contact .contact-us form input:focus,
+.contact .contact-us form textarea:focus {
+  outline-color: var(--secondary-color);
+}
+.contact .contact-us form textarea {
+  min-height: 150px;
+  max-height: 150px;
+}
+.contact .contact-us form p {
+  color: var(--text-dark);
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: 16px;
+}
+.contact .contact-us form p #remaining-char {
+  color: var(--secondary-color);
+  font-size: 20px;
+  line-height: 1.5;
+}
+.contact .contact-us form button {
+  background-color: var(--secondary-color);
+  font-size: 16px;
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+  border: none;
+}
+.contact .contact-us form button:hover {
+  background-color: white;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
