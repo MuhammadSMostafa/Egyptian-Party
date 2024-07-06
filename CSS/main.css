@@ -93,6 +93,11 @@ aside li a:hover,
   justify-content: center;
   text-align: center;
 }
+@media only screen and (max-width: 576px) {
+  .details .singers {
+    display: block;
+  }
+}
 .details .singers .content .headline {
   background-color: #e68285;
   cursor: pointer;
