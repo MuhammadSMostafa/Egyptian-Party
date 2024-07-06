@@ -7,7 +7,7 @@ let timeDifference = targetDate - currentDate;
 let countdownInterval = setInterval(() => {
   timeDifference = timeDifference - 1000;
   if (timeDifference <= 0) {
-    clearInterval(counterdownDate);
+    clearInterval(countdownInterval);
   } else {
     const seconds = Math.floor((timeDifference / 1000) % 60);
     const minutes = Math.floor((timeDifference / 1000 / 60) % 60);
